@@ -1,0 +1,9 @@
+# CPU alternative: do not install alongside onnxruntime-gpu in the same venv.
+onnxruntime>=1.20,<2
+numpy>=1.26,<3
+opencv-python>=4.10,<5
+huggingface-hub>=1,<3
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1
+playwright>=1.50,<2
+httpx>=0.28,<1
