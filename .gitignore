@@ -1,0 +1,16 @@
+.venv/
+.venv-*/
+.cache/
+__pycache__/
+outputs/
+# Downloaded models are recreated by setup_project.py; never commit weights.
+cuda_storage/
+*.onnx
+# Local secrets and recordings.
+.env
+.env.*
+!.env.example
+*.mp4
+*.avi
+.DS_Store
+Thumbs.db

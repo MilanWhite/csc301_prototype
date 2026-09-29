@@ -1,0 +1,10 @@
+# CUDA 12 build, compatible with the installed Windows driver.
+onnxruntime-gpu==1.20.2
+numpy>=1.26,<3
+opencv-python>=4.10,<5
+huggingface-hub>=1,<3
+nvidia-cuda-runtime-cu12==12.3.101
+nvidia-cublas-cu12==12.3.4.1
+nvidia-cufft-cu12==11.0.12.1
+nvidia-cuda-nvrtc-cu12==12.3.107
+nvidia-cudnn-cu12==9.1.1.17
