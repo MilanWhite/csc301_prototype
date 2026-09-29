@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Depth</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23141619'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23c7d7c9' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <section class="workspace" aria-label="Depth browser">
+      <div class="browser-shell">
+        <div class="toolbar">
+          <div class="history">
+            <button id="back" class="icon" aria-label="Go back" title="Back" disabled><svg viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></svg></button>
+            <button id="forward" class="icon" aria-label="Go forward" title="Forward" disabled><svg viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></svg></button>
+            <button id="reload" class="icon" aria-label="Reload page" title="Reload"><svg viewBox="0 0 24 24"><path d="M19 8a8 8 0 1 0 1 7M19 3v5h-5"/></svg></button>
+          </div>
+          <form id="navigation" autocomplete="off">
+            <span class="connection" aria-hidden="true"></span>
+            <input id="address" aria-label="Website address or search" spellcheck="false" autocomplete="off" autocapitalize="off" value="https://www.google.com/">
+            <button class="icon go" type="submit" aria-label="Navigate" title="Go"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+          </form>
+          <button id="expand" class="icon" aria-label="Toggle fullscreen" title="Fullscreen"><svg viewBox="0 0 24 24"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></button>
+        </div>
+        <div class="viewport" id="viewport" aria-busy="true">
+          <canvas id="screen" width="1440" height="900" tabindex="0" role="application" aria-label="Interactive website. Click to browse; type and scroll normally."></canvas>
+          <div class="waiting" aria-hidden="true"><span></span></div>
+          <div id="error" role="alert" hidden></div>
+        </div>
+      </div>
+      <div class="mode-dock">
+        <svg class="mode-icon normal-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="3"/><path d="M4 9h16"/></svg>
+        <button id="depth-toggle" type="button" role="switch" aria-checked="false" aria-label="Depth view" title="Depth view" disabled><span></span></button>
+        <svg class="mode-icon depth-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></svg>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
